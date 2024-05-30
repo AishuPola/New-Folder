@@ -240,3 +240,43 @@ modularity.
 4. Testability
 5. performance(space &time complexity)
 readability>perfomance
+
+
+## copy by value
+var q1=[100,200];
+var q3=[...q1];  
+... ---> is the spread operator
+then q3=[100,200]
+ if it is  q1.push(100)
+ then q1 is [100,200,100]
+q3 is [100,200]
+beacuse it is value not address to get changed.
+
+
+
+
+
+var q1=[100,200];
+var q3=[q1];  
+//it is nested array output
+
+
+## Loops
+```javascript
+const marks=[80,90,100];
+//more control
+for (let index=0;index<marks.length;index++){
+    console.log("index:",index,"marks",marks[index]);
+}
+
+//readbale and simple
+for(let idx in marks){//in-->index
+    console.log("index:",idx,"marks:",marks[idx]);
+}
+//readable and cleaner
+for(let mar of marks){
+    console.log("mark:",mar);
+} 
+//here we dont have acces of index here so its better to use in than of
+```
+
