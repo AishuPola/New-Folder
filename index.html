@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- elements/tags -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Html</title>
+    <style>
+      /* element selector */
+
+      h1 {
+        color: violet;
+
+        text-transform: uppercase;
+      }
+      h3,
+      h4,
+      h6 {
+        color: blueviolet;
+      }
+      p {
+        color: blueviolet;
+      }
+      /* class selector */
+      .comedy {
+        color: aqua;
+      }
+      .carroms {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+
+        align-items: center;
+      }
+      .container {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><center>Lets know about carroms!😁😁😉</center></h1>
+    <div class="container">
+      <img
+        class="carroms"
+        src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2020/04/09/2051966-982131283.jpg?itok=wuSTOqvw"
+      />
+    </div>
+    <h1><center>Hello,Amigos 😉😉😁 !</center></h1>
+    <h4>
+      Carrom is a tabletop game which resembles snooker or billiards, and the
+      more modern games of subbuteo and air hockey. The game of Carrom is played
+      by propelling discs and potting them into the four corner pockets on a
+      wooden playing board. Some variations use small cues but most Carrom is
+      played by hand.
+    </h4>
+    <!-- hello -->
+    <h4>Do you like carroms?</h4>
+    <input type="checkbox" id="Yes" name="C" value="C" />
+    <label>Yes</label> <br />
+    <input type="checkbox" id="No" name="No" value="No" />
+    <label>No</label> <br />
+
+    <p>Here are some links to play carroms online with your buddies!!</p>
+
+    <a href="https://www.agame.com/game/carrom-with-buddies">agame.com</a><br></br>
+
+    <a href="https://gamesnacks.com/games/carromclash">gamesnacks.com</a>
+    <img
+      class="carroms"
+      src="https://rukminim2.flixcart.com/image/850/1000/jwjkh3k0/board/e/h/f/carrom-board-game-27x27-inches-wooden-27-inch-board-1-click-n-original-imafgptg9fqdzche.jpeg?q=20&crop=false"
+    />
+    <script>
+      var student = {
+        name: "aish",
+        age: 20,
+        company: "proclink",
+      };
+      console.log(student.name);
+      console.log(student["age"]);
+      var t = null;
+      console.log(typeof t);
+      console.log(45 / 0);
+      let name = "puppy";
+      name = "pola";
+      console.log(name);
+
+      const marks = [35, 45, 75];
+      marks[1] = 78;
+      console.log(marks);
+
+      const t1 = [40, 50, 60];
+      const t2 = t1;
+      // same address is allocated for both t1 and t2 thats why both the values are same
+      const t3 = [40, 50, 60];
+      t1.push(80);
+      t2.push(90);
+      t3.push(70);
+      console.log(t1);
+      console.log(t2);
+      console.log(t3);
+    </script>
+  </body>
+</html>
