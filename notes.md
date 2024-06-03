@@ -280,3 +280,464 @@ for(let mar of marks){
 //here we dont have acces of index here so its better to use in than of
 ```
 
+
+## DAY-4
+
+ES6 FEATURES:
+>LET&CONST
+TEMPLATE LITERAL  
+SPREAD OPERATOR
+REST OPERATOR
+DESTRUCTIONG
+CLASS' ARROW FUNCTION==>
+PROMISE
+NUMERIC SPEARATORS 1_00_00_00
+
+## OBJECT METHODS
+ ```javascript
+ let salaries={
+    john:100,
+    peter:300,
+    Mary:300,
+ };
+ 
+ Object.keys(salaries);
+ Object.values(salaries);
+
+ ```
+ # shortcuts
+ ctrl+shift+p==>to open all the commands(command palette)  
+ ctrl+space==>auto complete
+  
+
+  ctrl+clik=ck==.it is usfel for opening the things.
+
+
+
+  ```javascript
+ //Template literal
+ //using backtick it makes code more readbale. just dollar and curly braces.
+ //it also supports multiline string with help of backtick .
+ const quotes=`Dream is not that u see in sleep, dream is something that does not let u sleep`
+
+ const movieUrl = (domain, genre, year) => `http://${domain}?genere=${genre}&year=${year}`;
+  //return "http://" + domain + "?genere=" + genre + "&year=" + year;
+  
+
+
+console.log(movieUrl("imdb.com", "thriller", 2020));
+//refactoring u're not adding any feature,code will work in same way but quality better-->functionality same.
+```
+
+
+ >color faded but not used in parameters....to change it we shuld use interpolation(i.e add $,backtick)
+
+
+ ## ARRAY DESTRUCTURING
+const[t1,t2]=[100,200];  
+
+//ARRAY DESTRUCTURING  
+
+const[t1,t2]=[100,200];  
+
+const[t1,t2,t3]=[100,50];  
+//this gives an error undefined infor t3  
+const[a1,a2,a3=80]=[100,200]  
+/*when it is undefined it is taken as 80  
+default value is taken only wen it is undefined  
+const[]  
+const[a1,a2,a3=80]=[100,200,500];  
+here 500 is defined thats why a3 is taken as 500 instead of 80.*/
+
+var [t1, t2] = [100, 200];  
+  console.log(t1, t2);  
+  //output  
+  100 200  
+ 
+  var [t1,t2,t3]=[100,200];  
+   console.log(t1,t2,t3)  
+  //output  
+  100 200 undefined  
+ 
+  var [t1,t2,t3=80]=[100,200];  
+  console.log(t1,t2,t3)  
+  //here t3=80 is called as default value  
+  //output  
+  100 200 80  
+  ```
+ 
+> The default value is only taken when t3 is undefined
+ 
+```javascript
+
+var [t1,t2,t3=80]=[100,200,500];
+console.log(t1,t2,t3)
+//output
+100 200 500
+ 
+var [t1,t2,t3=80]=[100,200,undefined];
+console.log(t1,t2,t3)
+//output
+100 200 80
+ 
+var [,t1,t2,t3=80]=[100,200,undefined];
+console.log(t1,t2,t3) //output
+200 undefined 80
+```
+ 
+> > This method is used to skip the values.This concept is called HOLES
+ 
+```js
+var [, , t1, t2, t3 = 80] = [100, 200, undefined];
+console.log(t1, t2, t3); //undefined undefined 80
+```
+ 
+## Object destructuring
+ 
+> The default value can be anything..number,object,etc..
+ 
+- The object destructuring works on key-value based rather than the indexing.
+ 
+```js
+const {name,networth,power}={
+  name:"Tony"
+  house:🤠
+  networth:🤑🤑🤑
+  power:🦾
+ 
+};
+console.log(name);
+console.log(networth);
+console.log(power);
+//output
+ 
+Tony
+🤑🤑🤑
+🦾
+```
+ 
+> > The unpacking in array is done by indexing and the unpacking in Objects is done by Key considerations.  
+
+ ```js
+const avengers={name:"Tony",   house:"🤠"
+const avengers={
+  name:"Tony",
+  house:"🤠",
+  networth:"🤑🤑🤑",
+  power:"🦾",
+ 
+};
+console.log(name);
+console.log(networth);
+console.log(power);
+ 
+const {name,networth,power}= avengers
+ 
+this is by using object destructing
+...................................
+has context menu
+The unpacking in array is done by indexing and the unpacking in Objects is done by Key considerations.
+ 
+## The task1 code with refactoring by using object destruction  
+
+ 
+
+const cart = [
+  { name: "apple", price: 0.5, quantity: 4 },
+  { name: "banana", price: 0.25, quantity: 6 },
+];
+ 
+const newItems = [
+  { name: "Cherry", price: 0.75, quantity: 5 },
+  { name: "Date", price: 1, quantity: 3 },
+];
+ 
+//   Ex 1.1: Combine cart + newItems
+const comb = [...cart, ...newItems];
+ 
+var result = 0;
+for (let { price, quantity } of comb) {
+  result = r price * quantity;
+}
+console.log("The Total Price of all fruits : " + result);
+//output
+10.25;
+```
+ 
+## ES features
+ 
+> > Unary operator : ++,--,!
+> > binary operator : 2+5, 6-2, 9\*7 7/2
+ 
+# Code snippets
+ 
+# Truthy vs falsy
+ 
+```js
+let x = [];
+if (x) {
+  console.log("Hey");
+} else {
+  console.log("NOpe");
+}
+//output
+Hey;
+```
+ 
+```js
+let x = [null];
+if (x) {
+  console.log("Hey");
+} else {
+  console.log("NOpe");
+}
+//output
+Hey;
+```
+ 
+```js
+let x = null;
+if (x) {
+  console.log("Hey");
+} else {
+  console.log("NOpe");
+}
+//output
+Nope;
+```
+
+## ES6
+ 
+let and const
+template literal
+spread operator
+rest operator
+destructing
+class
+arrow function
+ 
+## shortcuts
+ 
+- ctrl + space -> autocomplete
+- ctrl + / -> comment
+- win + . -> emojis
+- ctrl + , -> settings
+- ctrl + shift + p -> command pallete
+ 
+## Ternary condition
+ 
+5>4 ?"awesome:"cool"
+ 
+## Binary operators
+ 
+arithematic +, - , / , \*
+logical - && and operator || or operator
+relational >,<,>=,<=,==,===
+ 
+# unary operator
+ 
+++ post increment
+-- pre increment
+! not
+ 
+# Truthy vs falsy
+ 
+```js
+let x = "cool";
+if (x) {
+  console.log("hey");
+} else {
+  console.log("nope");
+}
+```
+ 
+- if the value is converted true then its truthy(refer above ex)
+- if the value is converted false then its falsy(refer below ex)
+ 
+```js
+let x = null;
+if (x) {
+  console.log("hey");
+} else {
+  console.log("nope");
+}
+o/p-nope
+
+ 
+let x=[];
+if(x){
+console.log("hey");
+} else {
+console.log("nope");
+}
+o/p-hey
+ 
+ 
+var height=150;
+var final=140||height;
+console.log(final);
+
+
+
+var avgtemp=20
+var temp=0||avgtemp;
+console.log(temp);
+
+//20(falsy values are followed here)
+var avgtemp=20;
+var temp=0??avgtemp;
+console.log(temp);
+//0(for null and undefined  falsy table is followed)
+//... is also used as rest operator-
+
+```
+## string methods
+>split
+>join
+>tolowercase
+>touppercase
+>reverse
+>slice
+>push
+ PASCAL CASE--->CarEngine
+ Camel case--->
+
+
+ ## the software development life cycle.(SDLC)
+
+ creating one design and other design--prototyping  
+  figma->is the design tool
+  auto layout
+  coolors.co for colors used for designing.
+  for any app we develop  
+  >planning  
+  >analysis  
+  >designing we do it figma....
+  >implementation----is developers  
+  testing and integration--pushing to the customers  
+  maintenance---every product will have support team to fix if anything is wrong.(very small small features are addded.)  
+
+  ## stakeholders.
+  
+  they are the people who are responsible if anything goes wrong. they having the authority to change in the project.  
+  People who are taking the risk. 
+  responsible for make of the product.  
+    
+## project manager:mainly on the business side. he will know accounting.   
+watch party:two people can watch the same show at a time ,it is paused it is paused for everyone.  
+
+##  system architect
+they will set up the project inititally.(to see which lang they shuld use.)what shuld be our FE,BE ABD db.  
+It is the blue print of the project.   
+ALL how they shuld be interact with each other.  
+why we shuld shuld in our company.   
+tailor making to the app 
+They shuld have knowledge about everything.
+They shuld also know about the cloud. 
+ ## analysis:
+P.O  
+P.M  
+business analyst  
+Cto  
+## design 
+system architect  
+ux/ui designer
+## development  
+front-end
+back-end  
+## testing  
+solutions architect  
+qa engineer  
+tester  
+devops
+## deployment
+>data adminstrator  
+devops
+## maintainance
+>users  
+>testers  
+>support manager
+
+![alt text](<Screenshot (1).png>)
+## structure of 6 phases
+
+
+CEO+PM----->designer+PM  --------->ceo+pm+designer    --------->cto+pm-------->be+fe,cto,testing------>bet+fe(integration)tests-------->testing------>be+fe----->devops----->customers------>tickets raised(support team)----->again fe+be team will work on it.---->again testing,devops continuation until customer is satisfied.
+
+
+
+designer+PM  --------->ceo+pm+designer is business analysis    
+cto+pm is technical analysis.  
+be+fe,cto,testing------>bet+fe(integration) is implementation 
+
+
+
+### service and product based 
+>product based---->lots of investement in r&d  (multiple customers) replicated easily .   
+>lots of  time  
+>example:netflix  (its not a one time thing.)  
+>service based: its a one time thing,it is customised for a particular need only.     
+>its for particular customer.  
+they keep on changing languages.
+
+## methodologies:
+## waterfall model
+6 months time
+reqiurement  is clear
+planning is done u cant shift columns after wrds,things cannot be changed  
+eg:construction of bridge...is permanent we cant change it again if we want.  
+for suppose: u want to change from react to angular,without changing any requirement only structure is changed (technology migration in IT) 
+customer interaction is not there,,,,what is last output is  .
+2 release
+
+
+## agile 
+- everytime the cycle is keep on repeating regularly.   
+- monthly release is there to check waht is wrong.   
+- quickly make mistaken, learn from it and implememt again.  
+- deployements 3 times in day.
+2sprints in a month
+( 1 sprint is 2 weeks)  
+( 2 weeks for development   
+2 weeks for testing)
+ ## implementing agile:
+ -scrum is the implementation of agile.   
+  - why agile:interaction with the customer
+  ## implementation of agile:
+  ## SCRUM
+!![alt text](<Screenshot 2024-06-03 151517.png>)
+tickets are for to see what people are dng what task.
+sprint planning(1hr time)(task is split into small chunks)----->  
+!![alt text](image.png)  
+
+sprint planning---1hr 
+scrum master --assign the tasks.
+<b>Story Points</b>-The time duration assigned to complete a particular task in the scrum
+
+the task which is assigned---story point.(fibannoci)(estimated days to complete the task)(ask seniors)( 1 2 3 5 8)days
+standup---(10-15min)  
+block-there are stuck in between without doing the task.  
+sprint retrospective----what can be improved can be said.   
+
+![alt text](image-1.png). 
+
+## HOW TO RUN THE 
+
+- ONES CODE IS CHECKED BY ANOTHER VICE VERSA----PEER REVIEW 
+- WORK WHICH IS NOT DONE---BACKLOG(T0-DO)
+- WHICH IS RUNNING RIGHTNOW---(IN PROGRESS) 
+ 
+
+ <b>kanban board</b>: its a tool for managing the scrum.
+
+# BURNDOWN CHART:
+Describes the task flow at which time 
+
+- It is regarding the progress.
+- this shows the continuous work  
+
+!![alt text](image-2.png)
+
+<b>spill-over</b>:sharing the work left in one sprint to another sprint.  
+
+!![alt text](image-3.png)
