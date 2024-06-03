@@ -741,3 +741,88 @@ Describes the task flow at which time
 <b>spill-over</b>:sharing the work left in one sprint to another sprint.  
 
 !![alt text](image-3.png)
+
+
+## coding standards:
+
+Are meant have uniformity throughout ur code base  
+## code Quality
+## Dry  
+## variables name
+- understandable/descriptive
+```js
+let a=50;//❌
+let age=50;//✅
+```
+- camelCae
+```js
+let student_name="aishwarya";❌
+let studentName="aishwarya";✅
+```
+
+- choose 'let' over 'var','const' over 'let'
+```js
+let panCard="B153729EHDIH";❌
+const panCard="B153729EHDIH";✅
+
+```
+```js
+const PI_VALUE="3.14";✅
+const pi_Value="3.14";❌
+```
+
+ ### errors(for variable name)
+ - reserved keywords('if','for')
+ ```js
+ let if="aishwarya";❌
+ ```
+ - cannot start with numbers
+ ```js
+ let 2cool="aishwarya";❌
+ ```
+
+ - cannot have specail symbols($,2,#,!)EXCEPT FOR '_'
+ ```js
+ let abc$123="aishu";❌
+ let abc_123="aishu";✅✅
+```
+
+## Documentation
+- Single comment
+```js
+//
+```
+- Multiline comments
+```js 
+/*
+*this is cool
+*function
+*/
+```
+# JS DOCS
+```JS
+/**
+ * Multiplies two numbers.
+ * @param {number} x - The first number.
+ * @param {number} y - The second number.
+ * @returns {number} The product of x and y.
+ * @example
+ * multiply(2, 3); // returns 6
+ */
+function multiply(x, y) {
+  return x * y;
+}
+```
+```js
+/**
+ * Making to uppercase.
+ * @param {string} str - The first string
+ * 
+ * @returns {string} The uppercase of the particular string
+ * @example
+ * tomakeUppercse("aishu"); // returns AISHU
+ */
+function tomakeUppercse(str) {
+  return str.toUpperCase();
+}
+```
