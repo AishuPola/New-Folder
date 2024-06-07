@@ -1,0 +1,16 @@
+p{
+    color:rgb(137, 3, 104);
+}  
+.hobbies{
+
+    border:5px solid rgb(166, 255, 0);
+    border-style: dashed;
+    padding:16px;
+    padding-left: 40px; 
+    border-radius: 10px;
+    background-color: aqua;
+    color:blue;
+    width:125px;
+
+    /* solid is for border. */
+}

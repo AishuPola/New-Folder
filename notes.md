@@ -703,6 +703,7 @@ customer interaction is not there,,,,what is last output is  .
  ## implementing agile:
  -scrum is the implementation of agile.   
   - why agile:interaction with the customer
+
   ## implementation of agile:
   ## SCRUM
 !![alt text](<Screenshot 2024-06-03 151517.png>)
@@ -717,13 +718,13 @@ scrum master --assign the tasks.
 the task which is assigned---story point.(fibannoci)(estimated days to complete the task)(ask seniors)( 1 2 3 5 8)days
 standup---(10-15min)  
 block-there are stuck in between without doing the task.  
-sprint retrospective----what can be improved can be said.   
+sprint retrospective----what can be improved can be said.(1 hr)   
 
 ![alt text](image-1.png). 
 
 ## HOW TO RUN THE 
 
-- ONES CODE IS CHECKED BY ANOTHER VICE VERSA----PEER REVIEW 
+- ONES CODE IS CHECKED BY ANOTHER VICE VERSA----PEER REVIEW (code quality is checked)(if they are following any coding standards)
 - WORK WHICH IS NOT DONE---BACKLOG(T0-DO)
 - WHICH IS RUNNING RIGHTNOW---(IN PROGRESS) 
  
@@ -754,7 +755,7 @@ Are meant have uniformity throughout ur code base
 let a=50;//❌
 let age=50;//✅
 ```
-- camelCae
+- camelCase
 ```js
 let student_name="aishwarya";❌
 let studentName="aishwarya";✅
@@ -802,6 +803,7 @@ const pi_Value="3.14";❌
 # JS DOCS
 ```JS
 /**
+*JSDOC advantage:auto-complete.
  * Multiplies two numbers.
  * @param {number} x - The first number.
  * @param {number} y - The second number.
@@ -825,4 +827,28 @@ function multiply(x, y) {
 function tomakeUppercse(str) {
   return str.toUpperCase();
 }
+ 
+
 ```
+ # html:
+ emmet cheatsheet  
+
+# anker tag:
+ target attribute =_blank then the link will open in other page(tag) instead of same page.  
+
+
+  we can give phone numbers(in anker tag give <b> ahref="tel:9000906504"</b>) and emails(href="mailto:paishwarya.com")  
+  # types of css:
+  - internal
+  - inline
+   - external 
+  # why internal css:
+   time of rendering will be reduced.
+   it is used for initial page.  
+   concise is the key.    
+
+# why external css:   
+the same link can be used for different html pages(files). 
+
+#  css terms
+![alt text](image-1.png)
