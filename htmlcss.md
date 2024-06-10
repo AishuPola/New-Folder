@@ -99,4 +99,40 @@ every element in html sshuld follow box model.
 shrink inside then padding.
 push the things --margin  
   
-   we can bend the border
+   we can bend the border   
+    
+   screen readers:  
+
+   max-width---->no scroll bar is present.   
+
+   1vh== one percentage of screen height
+   1vw== one percentage of screen width.
+   width: 1% of container.(it is div)
+   1 %== relative unit.  
+   1px: absolute unit.  
+
+
+   margin boder padding content---->box model
+   elemts--->every elemnt follows box model.
+   elements which have default margin:heading,paragraph,list.
+   by default padding: list.  
+   border,mrgin will not inherited.
+   font-color,style. these will get inherited  
+   span: class="something"
+   it can be used in the middle of text, and can be highlighted like bold, it visually doesnot do anything, only styles are added. 
+   color changing in background:gradient.  
+
+   website(my color space) for background 
+
+
+   block elements will ocuupy entire width.    
+   headings, paragraph, 
+
+   inline elements it puts everbody inside. these are accomadted. anker is inline element.  they occupy on content width. 
+   span is inline elements.  
+
+      clip-pather: masking is done.
+      animations can br done.    
+       
+      span:inline elemts
+      div is the block eleemnt. 
