@@ -194,12 +194,14 @@ when we want to change intermediate we are changing at one place only so we are 
   ![alt text](<Screenshot 2024-06-11 145804.png>)  
   ![alt text](image-21.png)  
 
-  every attribute shuld depend on primary key but ---->no dependency on non key attributes.(which are not primary key).  
-     
+  every attribute should depend on primary key but ---->no dependency on non key attributes.(which are not primary key).  
+
   here only cell is updated.  
 
 
-  # JOINS    
+  # JOINS  
+  for safety we normalised.  
+  to fetch the data we combine th tables.    
 
   ![alt text](image-22.png) 
 
@@ -217,9 +219,128 @@ joins are of two types:
  left join:
 
  ![alt text](image-24.png)
- right join:
+ right join: 
+
+ # a join b p.k=f.k
 
 ![alt text](<Screenshot 2024-06-11 153150.png>)
  full join:
  
- ![alt text](image-25.png)
+ ![alt text](image-25.png)   
+ wheneevr we want to drill by next level--->group by  
+
+
+ # DIFF BETWEEN WHERE AND HAVING:
+ - we use where before group by and 
+ after filtering by group by, then we use having.     
+
+ - where is for particular condition to check and after tht group by is used.  
+ - we cant interchange the order.  
+ - order matters.   
+
+
+ wenever we logs in  we use delete.  
+
+ adding a column,deleting a column,renamE a column------ALTER  
+  there is so rename a column, drop and do it.
+
+ # <b>dml:</b>(when ever we want to manipulate)
+ select
+ insert'
+ update
+ delete. 
+
+ # ddl:
+ create 
+ add
+ rename 
+ alter
+ drop 
+ truncate.(it doesnot modify table)(deleting the rows)
+  ![alt text](image-35.png)  
+  # DATA TYPES:
+  INTEGER,  
+  BOOLEAN    
+
+  - FLOAT(UPTO 3 DECIMAL POINTS)  
+  DOUBLE(upto 6 decimal points),  
+  REAL (upto 12 decimal points)(eg for isro people will use it real)  
+  CHARACTER(num_chars)----> storing few character,  
+  VARCHAR(num_chars), ---->sentence together 
+  TEXT-----> storing string.---->paragraphs  
+  DATE,DATETIME 
+  BLOB: all the images,videos are stored.  
+
+  path of the file we can keep instead of using blob for storing the images,videos. in file system.
+
+  data integrity:correct data.  
+  # CONSTRAINTs:  
+  why constraints ?:   
+  to maintain data integrity.  
+
+
+
+
+ -  primary key:   
+ -autro increment -wenevr we mark a column , id it will get auto increment.  
+ - unique  - it doesnot allow any duplicate values.
+ - not null  
+ - check-
+ - foreign key- we dont need to have key to join table.  
+ if movie is not released, then how could it be in box office, to avoid these problems then foreign key is used.  
+ - saving from messing up the data  
+
+<b>why foreigh key is used?</b>
+  
+ deleting the data:
+![alt text](image-36.png)   
+directly teacher table wont gets del 1st, the fk helps to see that 1st it deletes course table, and then teacer tabl. 
+it doesnot allow to del the data in teacher table 1st because course table will have fk that is td from the above table.   
+' the constraint is applied on tid 1st. 
+
+ it helps for inserting.  
+
+INTEGER :   
+3 types :
+1. int(-b,2b)
+2. smallint(-32k,32k)
+3. bigint. (-9* 10^8 ,9* 10^8)  
+STRING:   
+unicode: specia
+1. NVarchar: it takes double double size.()support multiple languages then use n vachar. (all are made of different multiple unicodes. )  
+more safer 
+
+2. varchar:  
+ nvarchar(max) will give max size.   
+
+ # learnmicrosoft.com---- to get to know all the data ty[pes of ] sql. 
+
+ DATE:  
+ data
+ datatime 
+
+ DECIMAL:
+ - decimal(exact)  
+ eg: decimal(10,2)
+ 1234.5678
+ 1234.68 
+ it will loose performance
+ - float(approx) it may store exact round  of values also.  
+
+ BOOLEAN:  
+ -   
+it stores data as bits either 0 and 1.    
+
+# Functions
+aggregate functions: 
+1. max,count,min,sum,avg 
+string functionss:  
+
+math functions:
+
+formatting(result modifications)
+
+
+
+  
+
